@@ -51,7 +51,7 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* ********************************** */
@@ -195,7 +195,24 @@ header .container .score-box span:last-of-type {
   width: 24px;
   height: 24px;
 }
-
+@media (max-width: 768px) {
+  .rules-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .rules-box .top .close-rules {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+  }
+}
 /* Feel free to remove these styles or customise in your own stylesheet 👍
   <style>
     .attribution { font-size: 11px; text-align: center; }
