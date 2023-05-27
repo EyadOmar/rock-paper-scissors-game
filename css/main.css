@@ -7,13 +7,50 @@
   --gradient-rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
   --gradient-lizard: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
   --gradient-cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
-  --gradient-radial-bg: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+  --gradient-radial-bg: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 
   --clr-dark-Text: hsl(229, 25%, 31%);
   --clr-score-Text: hsl(229, 64%, 46%);
   --clr-header-Outline: hsl(217, 16%, 45%);
 
   --ff: "Barlow Semi Condensed", sans-serif;
+}
+
+/* ********************************** */
+/* ************Components************** */
+/* ********************************** */
+.container {
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+@media (min-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1160px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1366px;
+  }
+}
+
+/* ********************************** */
+/* ************General Rules************** */
+/* ********************************** */
+body {
+  background-color: hsl(214, 47%, 23%);
+  background: var(--gradient-radial-bg);
+  color: white;
 }
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍
