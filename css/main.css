@@ -44,14 +44,25 @@
   }
 }
 
+.dark-filter {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+  display: none;
+}
+
 /* ********************************** */
-/* ************local Rules************** */
+/* ************Global Rules************** */
 /* ********************************** */
 body {
   background-color: hsl(214, 47%, 23%);
   background: var(--gradient-radial-bg);
   color: white;
   font-family: var(--ff);
+  position: relative;
 }
 
 /* ********************************** */
@@ -148,6 +159,41 @@ header .container .score-box span:last-of-type {
     width: fit-content;
     font-size: 1.2rem;
   }
+}
+
+/* ********************************** */
+/* ************Rules Box************** */
+/* ********************************** */
+.rules-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: var(--clr-dark-Text);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.rules-box .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.rules-box .top h2 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.rules-box .top .close-rules {
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍
