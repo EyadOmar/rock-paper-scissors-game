@@ -229,6 +229,13 @@ header .container .score-box span:last-of-type {
 /* ********************************** */
 /* ************Pick hand************** */
 /* ********************************** */
+.pick-hand {
+  transition: visibility 500ms, opacity 500ms linear;
+}
+.pick-hand.collapse {
+  visibility: hidden;
+  opacity: 0;
+}
 .pick-hand .container {
   padding-top: 100px;
   display: grid;
@@ -237,7 +244,6 @@ header .container .score-box span:last-of-type {
   max-width: 700px;
   position: relative;
 }
-
 .pick-hand .container .triangle {
   position: absolute;
   left: 50%;
@@ -257,6 +263,7 @@ header .container .score-box span:last-of-type {
   margin-inline: auto;
   position: relative;
   border-radius: 50%;
+  transition: width 1s ease;
 }
 .pick-hand .container .hand-box::before {
   position: absolute;
@@ -286,6 +293,10 @@ header .container .score-box span:last-of-type {
   grid-column: 1 / -1;
 }
 
+.pick-hand .container .hand-box:hover {
+  width: 200px;
+}
+
 @media (max-width: 768px) {
   .pick-hand .container {
     padding-top: 50px;
@@ -294,6 +305,9 @@ header .container .score-box span:last-of-type {
 @media (max-width: 440px) {
   .pick-hand .container .hand-box {
     width: 100px;
+  }
+  .pick-hand .container .hand-box:hover {
+    width: 125px;
   }
 }
 /* Feel free to remove these styles or customise in your own stylesheet 👍
