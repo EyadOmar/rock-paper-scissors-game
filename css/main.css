@@ -12,6 +12,8 @@
   --clr-dark-Text: hsl(229, 25%, 31%);
   --clr-score-Text: hsl(229, 64%, 46%);
   --clr-header-Outline: hsl(217, 16%, 45%);
+
+  --ff: "Barlow Semi Condensed", sans-serif;
 }
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍
