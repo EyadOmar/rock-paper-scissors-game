@@ -2,9 +2,21 @@
 /* ************Variables************** */
 /* ********************************** */
 :root {
-  --gradient-scissors: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-  --gradient-paper: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-  --gradient-rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+  --gradient-scissors: linear-gradient(
+    90deg,
+    hsl(39, 89%, 49%) 0%,
+    hsl(40, 84%, 53%) 100%
+  );
+  --gradient-paper: linear-gradient(
+    90deg,
+    hsl(230, 89%, 62%) 0%,
+    hsl(230, 89%, 65%) 100%
+  );
+  --gradient-rock: linear-gradient(
+    90deg,
+    hsl(349, 71%, 52%) 0%,
+    hsl(349, 70%, 56%) 100%
+  );
   --gradient-lizard: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
   --gradient-cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
   --gradient-radial-bg: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
@@ -211,6 +223,77 @@ header .container .score-box span:last-of-type {
     left: 50%;
     transform: translateX(-50%);
     bottom: 80px;
+  }
+}
+
+/* ********************************** */
+/* ************Pick hand************** */
+/* ********************************** */
+.pick-hand .container {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 10px;
+  max-width: 700px;
+  position: relative;
+}
+
+.pick-hand .container .triangle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.pick-hand .container .hand-box {
+  cursor: pointer;
+  background-color: white;
+  width: max(150px, 10vw);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  position: relative;
+  border-radius: 50%;
+}
+.pick-hand .container .hand-box::before {
+  position: absolute;
+  content: "";
+  width: 125%;
+  height: 125%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.pick-hand .container .paper-box::before {
+  background: var(--gradient-paper);
+}
+
+.pick-hand .container .scissors-box::before {
+  background: var(--gradient-scissors);
+}
+
+.pick-hand .container .rock-box::before {
+  background: var(--gradient-rock);
+}
+
+.pick-hand .container .rock-box {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .pick-hand .container {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 440px) {
+  .pick-hand .container .hand-box {
+    width: 100px;
   }
 }
 /* Feel free to remove these styles or customise in your own stylesheet 👍
