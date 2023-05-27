@@ -45,12 +45,70 @@
 }
 
 /* ********************************** */
-/* ************General Rules************** */
+/* ************local Rules************** */
 /* ********************************** */
 body {
   background-color: hsl(214, 47%, 23%);
   background: var(--gradient-radial-bg);
   color: white;
+  font-family: var(--ff);
+}
+
+header {
+  padding-top: 40px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--clr-header-Outline);
+  width: fit-content;
+  margin-inline: auto;
+  min-width: max(300px, 50vw);
+  padding: 1.2rem;
+  border-radius: 15px;
+}
+
+header .container h1 {
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+header .container .score-box {
+  background-color: white;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 10px;
+  color: var(--clr-score-Text);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+header .container .score-box span {
+  display: block;
+}
+
+header .container .score-box span:last-of-type {
+  font-size: 3rem;
+  color: var(--clr-dark-Text);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  header .container h1 {
+    font-size: 1.8rem;
+  }
+  header .container .score-box {
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  header .container .score-box span:last-of-type {
+    font-size: 2rem;
+  }
 }
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍
