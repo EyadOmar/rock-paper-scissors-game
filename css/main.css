@@ -1,0 +1,15 @@
+/* ********************************** */
+/* ************Variables************** */
+/* ********************************** */
+:root {
+  --gradient-scissors: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+  --gradient-paper: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+  --gradient-rock: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+  --gradient-lizard: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+  --gradient-cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+  --gradient-radial-bg: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
+
+  --clr-dark-Text: hsl(229, 25%, 31%);
+  --clr-score-Text: hsl(229, 64%, 46%);
+  --clr-header-Outline: hsl(217, 16%, 45%);
+}
